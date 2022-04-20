@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Limiter</title>
+</head>
+<body>
+    <h1>HIT AN API</h1>
+    <button id="api1">Hit api1</button>
+    <button id="api2">Hit api2</button>
+    <button id="api3">Hit api3</button>
+
+    <pre id="output"></pre>
+</body>
+</html>
+<script>
+const ap1=document.getElementById('api1');
+const ap2=document.getElementById('api2');
+const ap3=document.getElementById('api3');
+const output=document.getElementById('output');
+
+async function hitApi(url){
+    const response=await fetch(`/api/${url}`,{method:"POST"}).then(res=>res.json());
+
+
+output.innerText+=`\n Response: ${res.response}  Calls=${res.callsInAMinute}  TTL=${res.ttl}` ;
+}
+
+
+
+</script>

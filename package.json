@@ -1,0 +1,26 @@
+{
+  "name": "api-rate-limit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HrgChampion/api-rate-limit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HrgChampion/api-rate-limit/issues"
+  },
+  "homepage": "https://github.com/HrgChampion/api-rate-limit#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "ioredis": "^5.0.4",
+    "node-fetch": "^3.2.3"
+  }
+}
